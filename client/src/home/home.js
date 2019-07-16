@@ -35,13 +35,16 @@ export function Home() {
                     <div id='search-segment'>
                         <Header as='h2'>
                             <Header.Content>
+                                <Icon color='red' name="youtube"/>
+                            </Header.Content>
+                            <Header.Content>
                             DYV - Download Youtube Video
                             <Header.Subheader>Free | Fast | Fun</Header.Subheader>
                             </Header.Content>
                         </Header>
                         <Popup
                             trigger={<Input
-                                action={{ color: 'teal', labelPosition: 'left', icon: 'download', content: 'https://youtube.com/', onClick: validateVideo }}
+                                action={{ color: 'red', labelPosition: 'left', icon: 'download', content: 'https://youtube.com/', onClick: validateVideo }}
                                 actionPosition='left'
                                 placeholder='Search...'
                             />       }

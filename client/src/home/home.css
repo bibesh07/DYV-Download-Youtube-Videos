@@ -1,5 +1,5 @@
 #first-segment {
-        background: linear-gradient(to right, #6A82FB, #FC5C7D);
+        background: linear-gradient(to right, #e52d27, #b31217); /*linear-gradient(to right, #6A82FB, #FC5C7D)*/
         height: -webkit-fill-available;
         color: white;
 }
@@ -19,4 +19,8 @@ h1 {
 #search-segment {
         margin-top: 38%;
         text-align: center;
+}
+
+.ui teal icon left labeled button {
+
 }
