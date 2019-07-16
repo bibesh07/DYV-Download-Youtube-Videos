@@ -2,5 +2,21 @@
         background: linear-gradient(to right, #6A82FB, #FC5C7D);
         height: -webkit-fill-available;
         color: white;
+}
 
+a {
+        color: white;
+}
+
+h1 {
+        text-align: center;
+}
+
+#instruction-segment {
+        margin-top: 34%;
+}
+
+#search-segment {
+        margin-top: 38%;
+        text-align: center;
 }
