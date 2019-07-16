@@ -1,5 +1,5 @@
 #first-segment {
-        background: linear-gradient(to right, #e52d27, #b31217); /*linear-gradient(to right, #6A82FB, #FC5C7D)*/
+        background: linear-gradient(to right, #e52d27, hsl(358, 82%, 39%)); /*linear-gradient(to right, #6A82FB, #FC5C7D)*/
         height: -webkit-fill-available;
         color: white;
 }

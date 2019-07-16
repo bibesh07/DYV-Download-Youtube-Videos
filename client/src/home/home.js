@@ -3,7 +3,7 @@ import { Grid, Header, Input, Popup, Icon } from 'semantic-ui-react'
 import 'semantic-ui-css/semantic.min.css';
 import './home.css';
 export function Home() {
-    const[name, setName] = useState('test');
+    const[videoUrl, setVideoUrl] = useState('test');
 
     const validateVideo = (e) => {
         console.log('The video has been clicked');
@@ -44,7 +44,7 @@ export function Home() {
                         </Header>
                         <Popup
                             trigger={<Input
-                                action={{ color: 'red', labelPosition: 'left', icon: 'download', content: 'https://youtube.com/', onClick: validateVideo }}
+                                action={{ color: 'red', labelPosition: 'left', icon: 'download', content: 'https://youtube.com/watch?v=', onClick: validateVideo }}
                                 actionPosition='left'
                                 placeholder='Search...'
                             />       }
