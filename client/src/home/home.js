@@ -2,16 +2,37 @@ import React, {useState} from 'react';
 import { Grid, Header, Input, Popup, Icon } from 'semantic-ui-react'
 import 'semantic-ui-css/semantic.min.css';
 import './home.css';
+import {VideoDescription} from '../videoDescription/VideoDescription';
+
 export function Home() {
-    const[videoUrl, setVideoUrl] = useState('test');
+    const[videoUrl, setVideoUrl] = useState('');
+    const[isOpen, setIsOpen] = useState(false);
+    const[videoTitle, setVideoTitle] = useState('Test Title');
+    const[videoDescription, setVideoDescription] = useState('This is a test video Description');
+    // const[videoUrl, setVideoUrl] = useState('https://www.youtube.com/embed/DPwiFdWAUHk');
+    const[videoFileName, setVideoFileName] = useState('test.mp4');
 
     const validateVideo = (e) => {
         console.log('The video has been clicked');
         console.log(e);
     }   
 
+
+    const trimVideoInput = (e) => {
+        let stringToTrim = e.target.value;
+        console.log(stringToTrim);
+        if (stringToTrim.match('https')) {
+            setVideoUrl(stringToTrim.slice(stringToTrim.indexOf('=')+1, stringToTrim.length));
+        } else {
+            setVideoUrl(stringToTrim);
+        }
+
+        e.target.Value = videoUrl;
+    }
+
     return (
         <Grid divided='vertically'>
+            <VideoDescription isOpen={isOpen} videoTitle={videoTitle} videoDescription={videoDescription} videoFileName={videoFileName} videoUrl={videoUrl}/>
             <Grid.Row columns={2}>
                 <Grid.Column id="first-segment">
                     <div id="instruction-segment">
@@ -47,6 +68,8 @@ export function Home() {
                                 action={{ color: 'red', labelPosition: 'left', icon: 'download', content: 'https://youtube.com/watch?v=', onClick: validateVideo }}
                                 actionPosition='left'
                                 placeholder='Search...'
+                                onChange={trimVideoInput}
+                                value={videoUrl}
                             />       }
                             header='Video Search'
                             content='Click after you enter an url'
